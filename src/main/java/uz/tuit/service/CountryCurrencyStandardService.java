@@ -1,5 +1,9 @@
-package uz.tuit;
+package uz.tuit.service;
 
+import uz.tuit.CSVReader;
+import uz.tuit.ChunkResultIterator;
+import uz.tuit.CountryCurrencyCSVReader;
+import uz.tuit.repository.CountryCurrencyRepository;
 import uz.tuit.dto.CountryCurrencyDTO;
 
 import java.util.Objects;
@@ -7,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-public class CountryCurrencySimpleService implements CountryCurrencyService {
+public class CountryCurrencyStandardService implements CountryCurrencyService {
 
     private CSVReader<CountryCurrencyDTO> csvReader = new CountryCurrencyCSVReader();
     private CountryCurrencyRepository repository = new CountryCurrencyRepository();

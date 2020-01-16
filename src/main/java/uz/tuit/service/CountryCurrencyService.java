@@ -1,4 +1,4 @@
-package uz.tuit;
+package uz.tuit.service;
 
 public interface CountryCurrencyService {
 

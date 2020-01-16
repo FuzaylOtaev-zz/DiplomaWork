@@ -1,4 +1,4 @@
-package uz.tuit;
+package uz.tuit.repository;
 
 import uz.tuit.config.DatabaseManager;
 import uz.tuit.dto.CountryCurrencyDTO;
