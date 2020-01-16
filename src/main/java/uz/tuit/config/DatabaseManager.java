@@ -1,6 +1,4 @@
-package uz.tuit.util;
-
-import uz.tuit.config.Config;
+package uz.tuit.config;
 
 import java.sql.*;
 
@@ -11,7 +9,7 @@ public class DatabaseManager {
 
     public void connect() {
         try {
-            connection = DriverManager.getConnection(config.getDatabaseUser(), config.getDatabasePassword(), config.getDatabaseUrl());
+            connection = DriverManager.getConnection(config.getDatabaseUrl(), config.getDatabaseUser(), config.getDatabasePassword());
         } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console" + e);
             e.printStackTrace();
