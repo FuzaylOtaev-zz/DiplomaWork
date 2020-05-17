@@ -1,17 +1,26 @@
 package uz.tuit;
 
-import uz.tuit.service.CountryCurrencyAkkaService;
-import uz.tuit.service.CountryCurrencyStandardService;
+import uz.tuit.config.DatabaseManager;
+import uz.tuit.service.AkkaSalesService;
+import uz.tuit.service.SalesService;
+import uz.tuit.service.StandardSalesService;
 
 import java.io.IOException;
 
 public class Launcher {
     public static void main(String args[]) throws IOException {
-//        CountryCurrencyStandardService simpleService = new CountryCurrencyStandardService();
+//        StandardSalesService simpleService = new StandardSalesService();
 //        simpleService.processData();
 
-        CountryCurrencyAkkaService akkaService = new CountryCurrencyAkkaService();
-        akkaService.processData();
+//        SalesService salesService = new AkkaSalesService();
+//        salesService.processData();
 
+        DatabaseManager databaseManager = new DatabaseManager();
+        databaseManager.connect();
+
+    }
+
+    public void test() {
+        System.out.println(getClass().getClassLoader().getResource("D:\\1000000_Sales_Records.csv").getFile());
     }
 }

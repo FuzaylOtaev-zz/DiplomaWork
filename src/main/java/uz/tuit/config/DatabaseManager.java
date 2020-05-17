@@ -9,7 +9,10 @@ public class DatabaseManager {
 
     public void connect() {
         try {
-            connection = DriverManager.getConnection(config.getDatabaseUrl(), config.getDatabaseUser(), config.getDatabasePassword());
+            connection = DriverManager.getConnection(
+                    "jdbc:postgresql://carguide.db:5432/riskvin",
+                    "devadmin",
+                    "devadmin!@#");
         } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console" + e);
             e.printStackTrace();
